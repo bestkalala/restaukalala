@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalala Kitchen | Saveurs Authentiques</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Style pour l'effet de révélation au scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans">
+
+    <!-- BARRE DE NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-orange-600 tracking-tighter">
+                KALALA <span class="text-stone-800">KITCHEN</span>
+            </h1>
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#accueil" class="hover:text-orange-600 transition">Accueil</a></li>
+                <li><a href="#menu" class="hover:text-orange-600 transition">Menu</a></li>
+                <li><a href="#contact" class="hover:text-orange-600 transition">Contact</a></li>
+            </ul>
+            <button class="bg-orange-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition duration-300">
+                Commander
+            </button>
+        </div>
+    </nav>
+
+    <!-- SECTION HERO (ACCUEIL) -->
+    <header id="accueil" class="h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative text-center text-white px-4 reveal">
+            <h2 class="text-5xl md:text-7xl font-bold mb-4">L'Art de Bien Manger</h2>
+            <p class="text-xl md:text-2xl mb-8 text-stone-200">Découvrez une cuisine fusion unique chez Kalala Kitchen</p>
+            <a href="#menu" class="bg-white text-orange-600 px-8 py-3 rounded-full font-bold text-lg hover:scale-105 transition-transform inline-block">
+                Voir la Carte
+            </a>
+        </div>
+    </header>
+
+    <!-- SECTION MENU -->
+    <section id="menu" class="py-20 max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl font-bold mb-2">Nos Incontournables</h2>
+            <div class="h-1 w-20 bg-orange-600 mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plat 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow reveal">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Plat" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Bowl Signature Kalala</h3>
+                    <p class="text-stone-600 mb-4">Un mélange frais de quinoa, avocat et épices secrètes.</p>
+                    <span class="text-orange-600 font-bold text-xl">14.50 €</span>
+                </div>
+            </div>
+
+            <!-- Plat 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow reveal">
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=500&q=80" alt="Plat" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Pancakes Gourmands</h3>
+                    <p class="text-stone-600 mb-4">Servis avec sirop d'érable et fruits de saison.</p>
+                    <span class="text-orange-600 font-bold text-xl">12.00 €</span>
+                </div>
+            </div>
+
+            <!-- Plat 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow reveal">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80" alt="Plat" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Grillade Spéciale</h3>
+                    <p class="text-stone-600 mb-4">Viande sélectionnée, marinée pendant 24 heures.</p>
+                    <span class="text-orange-600 font-bold text-xl">18.00 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CONTACT / FOOTER -->
+    <footer id="contact" class="bg-stone-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="text-3xl font-bold mb-4">Kalala Kitchen</h2>
+                <p class="text-stone-400 mb-6">123 Rue de la Gastronomie, 75000 Paris</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-orange-600 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-orange-600 transition"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="bg-stone-800 p-8 rounded-xl reveal">
+                <h3 class="text-xl font-bold mb-4">Horaires d'ouverture</h3>
+                <ul class="text-stone-400 space-y-2">
+                    <li class="flex justify-between"><span>Lundi - Vendredi</span> <span>11h - 22h</span></li>
+                    <li class="flex justify-between"><span>Samedi - Dimanche</span> <span>10h - 23h</span></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center text-stone-500 mt-12 text-sm">© 2023 Kalala Kitchen. Design simple & moderne.</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
